@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header wow="asaks" isi="aaa" />
+        <Header />
       </div>
     );
   }
@@ -17,7 +17,8 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <Counter />
+        <Counter nama="lele" />
+        <Counter nama="ikan" />
       </div>
     );
   }
@@ -47,6 +48,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
+        <h1>{this.props.nama}</h1>
         <h1>{this.state.angka}</h1>
 
         <button onClick={this.tambah}>tambah</button>
