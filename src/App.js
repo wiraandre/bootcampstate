@@ -35,13 +35,12 @@ class Counter extends Component {
   };
 
   kurang = () => {
-    if(this.state.angka<0){
-      alert"angka tidak boleh lebih kecil dari 0";
-    }else{
-      this.setState({
-        angka: this.state.angka - 1
-    }
-    
+    // if(this.state.angka<0){
+    //   alert"angka tidak boleh lebih kecil dari 0";
+    // }else{
+    this.setState({
+      angka: this.state.angka - 1
+      // }
     });
   };
 
