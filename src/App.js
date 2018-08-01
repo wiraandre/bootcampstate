@@ -8,14 +8,8 @@ class App extends Component {
   state = {
     page: 'home'
   };
-  kehome = () => {
-    this.setState({ page: 'home' });
-  };
-  kekontak = () => {
-    this.setState({ page: 'contact' });
-  };
-  keabout = () => {
-    this.setState({ page: 'about' });
+  pindah = coro => {
+    this.setState({ page: coro });
   };
 
   render() {
@@ -26,9 +20,24 @@ class App extends Component {
         {this.state.page == 'about' && <About />}
         {this.state.page == 'contact' && <Contact />}
 
-        <button onClick={this.kehome}>home</button>
-        <button onClick={this.kekontak}>kontak</button>
-        <button onClick={this.keabout}>about</button>
+        <button
+          onClick={() => {
+            this.pindah('home');
+          }}>
+          home
+        </button>
+        <button
+          onClick={() => {
+            this.pindah('about');
+          }}>
+          kontak
+        </button>
+        <button
+          onClick={() => {
+            this.pindah('contact');
+          }}>
+          about
+        </button>
       </div>
     );
   }
