@@ -3,6 +3,7 @@ import './App.css';
 import Home from './container/HomeContainer';
 import About from './container/AboutContainer';
 import Contact from './container/ContactContainer';
+import Napigasi from './container/Napigasi';
 
 class App extends Component {
   state = {
@@ -15,29 +16,11 @@ class App extends Component {
   render() {
     return (
       <div>
+        {<Napigasi napigate={this.pindah} />}
         {/* <Header /> */}
         {this.state.page == 'home' && <Home />}
         {this.state.page == 'about' && <About />}
         {this.state.page == 'contact' && <Contact />}
-
-        <button
-          onClick={() => {
-            this.pindah('home');
-          }}>
-          home
-        </button>
-        <button
-          onClick={() => {
-            this.pindah('about');
-          }}>
-          kontak
-        </button>
-        <button
-          onClick={() => {
-            this.pindah('contact');
-          }}>
-          about
-        </button>
       </div>
     );
   }
