@@ -47,13 +47,18 @@ class Counter extends Component {
 
   render() {
     return (
-      <div>
-        <h1>{this.props.nama}</h1>
-        <h1>{this.state.angka}</h1>
+      <center>
+        <div
+          style={{
+            backgroundImage: `url(${'https://images.pexels.com/photos/38910/magnolia-trees-springtime-blossoms-spring-38910.jpeg?auto=compress&cs=tinysrgb&h=350'})`
+          }}>
+          <h1>{this.props.nama}</h1>
+          <h1>{this.state.angka}</h1>
 
-        <button onClick={this.tambah}>tambah</button>
-        <button onClick={this.kurang}>kurang</button>
-      </div>
+          <button onClick={this.tambah}>tambah</button>
+          <button onClick={this.kurang}>kurang</button>
+        </div>
+      </center>
     );
   }
 }
