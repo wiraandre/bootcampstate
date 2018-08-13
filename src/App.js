@@ -16,9 +16,31 @@ export default App;
 class Header extends Component {
   render() {
     return (
-      <div>
-        <Counter nama="lele" />
-        <Counter nama="ikan" />
+      <div
+        style={{
+          backgroundImage: `url(${'https://images.pexels.com/photos/683402/pexels-photo-683402.jpeg?auto=compress&cs=tinysrgb&h=350'})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }}>
+        <Counter nama="Counter Atas" />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Counter nama="Counter Bawah" />
       </div>
     );
   }
@@ -50,13 +72,15 @@ class Counter extends Component {
       <center>
         <div
           style={{
-            backgroundImage: `url(${'https://images.pexels.com/photos/38910/magnolia-trees-springtime-blossoms-spring-38910.jpeg?auto=compress&cs=tinysrgb&h=350'})`
+            backgroundImage: `url(${'https://images.pexels.com/photos/531636/pexels-photo-531636.jpeg?auto=compress&cs=tinysrgb&h=350'})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover'
           }}>
           <h1>{this.props.nama}</h1>
           <h1>{this.state.angka}</h1>
 
-          <button onClick={this.tambah}>tambah</button>
-          <button onClick={this.kurang}>kurang</button>
+          <button onClick={this.tambah}>Tambah</button>
+          <button onClick={this.kurang}>Kurang</button>
         </div>
       </center>
     );
